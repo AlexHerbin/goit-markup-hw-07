@@ -52,6 +52,16 @@ p {
   margin-right: auto;
 }
 
+.container__title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  color: var(--title-text-color);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -520,46 +530,21 @@ textarea {
   padding-bottom: 94px;
 }
 
-.section-title {
-  margin-bottom: 50px;
-
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-
-  color: var(--title-text-color);
-}
-
 /* Секция наши особенности */
 
 .feature-list {
   display: flex;
 }
 
-.feature-list .title {
-  margin-bottom: 10px;
-
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-
-  color: var(--title-text-color);
-}
-
-.feature-list .text {
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-.feature-list .item {
+.feature-list__item {
   flex-basis: calc((100% - 90px) / 4);
 }
 
-.feature-list .item:not(:last-child) {
+.feature-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.feature-icon {
+.feature-list__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -573,25 +558,40 @@ textarea {
   background-color: #f5f4fa;
 }
 
+.feature-list__title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--title-text-color);
+}
+
+.feature-list__text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
 /* Секция наши работы */
 
 .works-list {
   display: flex;
 }
 
-.works-list .item {
+.works-list__item {
   flex-basis: calc(100% / 3);
 }
 
-.works-list .item:not(:last-child) {
+.works-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.works-list .item {
+.works-list__item {
   position: relative;
 }
 
-.works-list .item-text {
+.works-list__text {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -708,7 +708,11 @@ textarea {
   display: flex;
 }
 
-.clients {
+.clients-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -722,23 +726,19 @@ textarea {
   transition: border-color 250ms var(--taiming-function);
 }
 
-.clients-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.clients-icon {
+.clients-list__icon {
   fill: #afb1b8;
 
   transition: fill 250ms var(--taiming-function);
 }
 
-.clients:hover,
-.clients:focus {
+.clients-list__logo:hover,
+.clients-list__logo:focus {
   border-color: var(--accent-color);
 }
 
-.clients:hover .clients-icon,
-.clients:focus .clients-icon {
+.clients-list__logo:hover .clients-list__icon,
+.clients-list__logo:focus .clients-list__icon {
   fill: var(--accent-color);
 }
 
