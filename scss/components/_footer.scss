@@ -1,12 +1,12 @@
-.footer-contaiter {
-    display: flex;
-    align-items: baseline;
-}
-
 .footer {
     padding: 60px 0;
 
     background-color: #2f303a;
+
+    &-container {
+            display: flex;
+            align-items: baseline;
+        }
 }
 
 .logo-text {
